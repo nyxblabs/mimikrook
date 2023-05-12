@@ -7,7 +7,7 @@ import {
    it,
    vi,
 } from 'vitest'
-import { Hookable, createDebugger } from '../src/index'
+import { Mimikrook, createDebugger } from '../src/index'
 
 const consoleMethods = [
    'time',
@@ -18,14 +18,14 @@ const consoleMethods = [
 ] as const
 
 describe('debugger', () => {
-   let hooks: Hookable
+   let hooks: Mimikrook
 
    beforeAll(() => {
       for (const l of consoleMethods)
          console[l] = vi.fn()
    })
    beforeEach(() => {
-      hooks = new Hookable()
+      hooks = new Mimikrook()
       vi.clearAllMocks()
    })
    afterAll(() => {

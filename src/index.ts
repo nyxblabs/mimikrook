@@ -1,4 +1,4 @@
-export { Hookable, createHooks } from './hookable'
+export { Mimikrook, createHooks } from './mimikrook'
 export {
    flatHooks,
    mergeHooks,

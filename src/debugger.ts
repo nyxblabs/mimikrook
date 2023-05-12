@@ -1,4 +1,4 @@
-import type { Hookable } from './hookable'
+import type { Mimikrook } from './mimikrook'
 
 export interface CreateDebuggerOptions {
    /** An optional tag to prefix console logs with */
@@ -26,7 +26,7 @@ const isBrowser = typeof window !== 'undefined'
 
 /** Start debugging hook names and timing in console */
 export function createDebugger(
-   hooks: Hookable<any>,
+   hooks: Mimikrook<any>,
    _options: CreateDebuggerOptions = {},
 ) {
    const options = <CreateDebuggerOptions>{

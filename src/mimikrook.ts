@@ -23,7 +23,7 @@ type InferSpyEvent<HT extends Record<string, any>> = {
    };
 }[keyof HT]
 
-export class Hookable<
+export class Mimikrook<
   HooksT extends Record<string, any> = Record<string, HookCallback>, HookNameT extends HookKeys<HooksT> = HookKeys<HooksT>,
 > {
    private _hooks: { [key: string]: HookCallback[] }
@@ -252,6 +252,6 @@ export class Hookable<
    }
 }
 
-export function createHooks<T extends Record<string, any>>(): Hookable<T> {
-   return new Hookable<T>()
+export function createHooks<T extends Record<string, any>>(): Mimikrook<T> {
+   return new Mimikrook<T>()
 }
