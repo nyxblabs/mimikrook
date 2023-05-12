@@ -21,7 +21,14 @@
     "require": "./dist/index.cjs"
   },
   "scripts": {
-    "test": "echo \"Happy hacking\" && 💙"
+    "prepublish": "nyxr build",
+    "build": "unbuild",
+    "dev": "vitest",
+    "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs .",
+    "lint:fix": "eslint --cache --ext .ts,.js,.mjs,.cjs . --fix",
+    "release": "nyxr test && nyxr build && nyxlx changelogen@latest --release --push && pnpm publish",
+    "test": "nyxr lint && vitest run --coverage",
+    "test:types": "tsc --noEmit"
   },
   "devDependencies": {
     "@nyxb/eslint-config": "^0.0.53",
