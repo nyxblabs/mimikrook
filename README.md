@@ -260,5 +260,5 @@ debug.close()
 [license-href]: https://github.com/nyxblabs/mimikrook/blob/main/LICENSE
 
 <!-- Cover -->
-[cover-src]: https://raw.githubusercontent.com/nyxblabs/mimikrook/main/.github/assets/mimikrook.png
+[cover-src]: https://raw.githubusercontent.com/nyxblabs/mimikrook/main/.github/assets/cover-github-mimikrook.png
 [cover-href]: https://💻nyxb.ws
