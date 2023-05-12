@@ -1,4 +1,3 @@
-import consolji from 'consolji'
 import {
    callEachWith,
    flatHooks,
@@ -70,7 +69,7 @@ export class Mimikrook<
             this._deprecatedMessages = new Set()
 
          if (!this._deprecatedMessages.has(message)) {
-            consolji.warn(message)
+            console.warn(message)
             this._deprecatedMessages.add(message)
          }
       }
@@ -168,7 +167,7 @@ export class Mimikrook<
    removeHooks(configHooks: NestedHooks<HooksT>) {
       const hooks = flatHooks<HooksT>(configHooks)
       for (const key in hooks) {
-      // @ts-expect-error is fine
+      // @ts-expect-error
          this.removeHook(key, hooks[key])
       }
    }
@@ -207,7 +206,6 @@ export class Mimikrook<
       const event = (this._before || this._after)
          ? { name, args: arguments_, context: {} }
          : undefined
-
       if (this._before)
          callEachWith(this._before, event)
 
