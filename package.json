@@ -27,7 +27,7 @@
     "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs .",
     "lint:fix": "eslint --cache --ext .ts,.js,.mjs,.cjs . --fix",
     "release": "nyxr test && nyxr build && nyxlx changelogen@latest --release --push && pnpm publish",
-    "test": "nyxr lint && vitest run --coverage",
+    "test": "nyxr lint && vitest run --coverage -u",
     "test:types": "tsc --noEmit"
   },
   "devDependencies": {
@@ -49,6 +49,7 @@
   ],
   "keywords": [
     "hook",
+    "mimikrook",
     "hookable",
     "plugin",
     "tapable",

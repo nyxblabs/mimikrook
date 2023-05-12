@@ -1,8 +1,8 @@
-// @ts-nocheck is fine here because we are testing the types
+// @ts-nocheck
 import { beforeEach, describe, expect, test, vi } from 'vitest'
 import { createHooks, flatHooks, mergeHooks } from '../src/index'
 
-describe('core: hookable', () => {
+describe('core: mimikrook', () => {
    beforeEach(() => {
       for (const l of ['log', 'warn', 'error', 'debug'])
          console[l] = vi.fn()
