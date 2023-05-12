@@ -7,10 +7,10 @@
   "hompage": "https://💻nyxb.ws",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nyxlabs/mimikrook.git"
+    "url": "git+https://github.com/nyxblabs/mimikrook.git"
   },
   "bugs": {
-    "url": "https://github.com/nyxlabs/mimikrook/issues"
+    "url": "https://github.com/nyxblabs/mimikrook/issues"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",

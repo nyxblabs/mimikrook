@@ -13,7 +13,7 @@ describe('hook types', () => {
       expectTypeOf(hooks.hook).parameter(0).not.toBeAny()
       expectTypeOf(hooks.hook).parameter(0).toEqualTypeOf<'foo' | 'bar'>()
 
-      // @ts-expect-error
+      // @ts-expect-error this is fine
       hooks.hook('foo', _parameter => true)
    })
 
@@ -40,9 +40,9 @@ describe('hook types', () => {
          'bar': (_arg) => {},
          'namespace:foo': () => {},
       })
-      // @ts-expect-error
+      // @ts-expect-error this is fine
       hooks.addHooks({ a: (_arg) => {} })
-      // @ts-expect-error
+      // @ts-expect-error this is fine
       hooks.addHooks({ namespace: { nonexistent: (_arg) => {} } })
    })
 

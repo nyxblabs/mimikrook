@@ -167,7 +167,7 @@ export class Mimikrook<
    removeHooks(configHooks: NestedHooks<HooksT>) {
       const hooks = flatHooks<HooksT>(configHooks)
       for (const key in hooks) {
-      // @ts-expect-error
+      // @ts-expect-error this is fine
          this.removeHook(key, hooks[key])
       }
    }

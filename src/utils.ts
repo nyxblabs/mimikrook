@@ -56,12 +56,10 @@ export function serial<T>(
 }
 
 // https://developer.chrome.com/blog/devtools-modern-web-debugging/#linked-stack-traces
-// @ts-expect-error is fine
 type CreateTask = typeof console.createTask
 const defaultTask: ReturnType<CreateTask> = { run: function_ => function_() }
 const _createTask: CreateTask = () => defaultTask
 const createTask
-// @ts-expect-error is fine
   = typeof console.createTask !== 'undefined' ? console.createTask : _createTask
 
 export function serialTaskCaller(hooks: HookCallback[], args: any[]) {
