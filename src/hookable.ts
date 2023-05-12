@@ -153,7 +153,6 @@ export class Hookable<
 
    addHooks(configHooks: NestedHooks<HooksT>) {
       const hooks = flatHooks<HooksT>(configHooks)
-      // @ts-expect-error
       const removeFns = Object.keys(hooks).map(key =>
          this.hook(key as HookNameT, hooks[key]),
       )
@@ -169,7 +168,7 @@ export class Hookable<
    removeHooks(configHooks: NestedHooks<HooksT>) {
       const hooks = flatHooks<HooksT>(configHooks)
       for (const key in hooks) {
-      // @ts-expect-error
+      // @ts-expect-error is fine
          this.removeHook(key, hooks[key])
       }
    }
@@ -205,10 +204,10 @@ export class Hookable<
       name: NameT,
       ...arguments_: Parameters<InferCallback<HooksT, NameT>>
    ): ReturnType<CallFunction> {
-      const event
-      = this._before || this._after
+      const event = (this._before || this._after)
          ? { name, args: arguments_, context: {} }
          : undefined
+
       if (this._before)
          callEachWith(this._before, event)
 
