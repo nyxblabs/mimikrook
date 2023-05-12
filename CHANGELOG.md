@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.0.3
+
+[compare changes](https://github.com/nyxblabs/mimikrook/compare/v0.0.2...v0.0.3)
+
+
+### 🏡 Chore
+
+  - **package.json): fix typos in repository and bugs URLs 🐛 fix(utils.ts): remove @ts-expect-error comments 🐛 fix(types.test.ts:** Remove @ts-expect-error comments The repository and bugs URLs in package.json contained typos in the repository and bugs URLs. The URLs have been fixed to point to the correct repository and issues page. The @ts-expect-error comments in utils.ts and types.test.ts have been removed as they were no longer necessary. ([fa8e255](https://github.com/nyxblabs/mimikrook/commit/fa8e255))
+
+### ❤️  Contributors
+
+- Nyxb <contact@nyxb.xyz>
+
 ## v0.0.2
 
 
